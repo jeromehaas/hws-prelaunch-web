@@ -1,0 +1,11 @@
+{
+  "name": "hws-prelaunch-web-v2",
+  "version": "1.0.0",
+  "description": "Prelaunch website for haas web solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jérôme Haas",
+  "license": "ISC"
+}
