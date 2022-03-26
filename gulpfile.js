@@ -36,7 +36,9 @@ const scssTask = (done) => {
 
 const jsTask = (done) => {
 	gulp.src(filePaths.js.src)
+		.pipe(sourcemaps.init())
 		.pipe(webpackStream(webpackConfig))
+		.pipe(sourcemaps.write('.'))
 		.pipe(dest(filePaths.js.dist[0]));
 	done();
 };
