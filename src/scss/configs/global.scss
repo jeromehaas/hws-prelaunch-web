@@ -11,6 +11,8 @@
 
 html, body {
 	height: 100%;
+	background-color: #000000;
+	overflow: hidden;
 }
 
 img {
@@ -23,20 +25,25 @@ img {
 }
 
 .page {
-	background-image: radial-gradient(#1f1f1f, #000000);
+	background-image: radial-gradient(#2b2b2b, #000000);
 	overflow: hidden;
-
-	
-	&__inner {
-		padding: 32px;
-		min-height: 100vh;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-	}
-
 }
+
+.page__inner {
+	padding: 32px;
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+@media (max-width: 600px) {
+	.page {
+		background-image: radial-gradient(#3c3c3c, #000);
+	}
+}
+
 

@@ -1,127 +1,135 @@
-
 .contact-card {
-    width:100%;
-		max-width: 230px;
-		aspect-ratio: 1 / 1.5;
+	width:100%;
+	max-width: 230px;
+	height: 351px;
+	
+	&__inner {
+		-webkit-transform: rotate(15deg) perspective(2000px) translateX(16px);
+						transform: rotate(15deg) perspective(2000px) translateX(16px);
+		height: 100%;
+		position: relative;
+		-webkit-transform-style: preserve-3d;
+						transform-style: preserve-3d;
+	}
+
+	
+	&__side {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 351px;	
+		width:100%;
+		background: $black;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		padding: 24px;
+		margin-bottom: 0;
+		-webkit-transform-origin: 50% 50% 0;
+				-ms-transform-origin: 50% 50% 0;
+						transform-origin: 50% 50% 0;
+		-webkit-transform-style: preserve-3d;
+						transform-style: preserve-3d;
 		
-		&__inner {
-			transform: rotate(15deg) perspective(2000px);
-			height: 100%;
-			position: relative;
-			transform-style: preserve-3d;
+		
+		&--front { -webkit-transform: translateZ(0px); transform: translateZ(0px); }
+		&--back { -webkit-transform: translateZ(-5px) rotateY(180deg); transform: translateZ(-5px) rotateY(180deg); }
+	
+	}
+	
+	&__logo {
+			margin-top: 16px;
+			width: 100%;
+			margin-bottom: 8px;
 		}
 
-		
-		&__side {
-			position: absolute;
-			top:0;
-			left:0;
-			height:100%;
-			width:100%;
-			background: $black;
-			-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
-			padding: 24px;
-			margin-bottom: 0;
-			transform-origin: 50% 50% 0;
-			transform-style: preserve-3d;
-			
-			
-			&--front { transform: translateZ(0px); }
-			&--back { transform: translateZ(-5px) rotateY(180deg); }
-		
-		}
-		
-		&__logo {
-				margin-top: 16px;
-				width: 100%;
-				margin-bottom: 8px;
-			}
-
-		&__title {
-	color: $white;
-	font-size: 16.3px;
-	text-align: center;
+	&__title {
+color: $white;
+font-size: 16.3px;
+text-align: center;
 }
 
-	&__address-item {
-	color: $white;
-	text-decoration: none;
-	font-size: 11.5px;
-	line-height: 1.4;
-	display: block;
-	font-weight: 700;
-	font-family: "Approach Mono";
+&__address-item {
+color: $white;
+text-decoration: none;
+font-size: 11.5px;
+line-height: 1.4;
+display: block;
+font-weight: 700;
+font-family: "Approach Mono";
 }
 
 
 &__thick {
-	content: '';
-	position: absolute;
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+height: 351px;
+z-index: -10;
+-webkit-transform-origin: 0% 0%;
+		-ms-transform-origin: 0% 0%;
+				transform-origin: 0% 0%;
+-webkit-transform: rotateY(90deg) translateY(-0%) translateX(0%);
+				transform: rotateY(90deg) translateY(-0%) translateX(0%);
+background-color: white;
+
+&--left {
+	height: 351px;
+	width: 2.5px;
 	top: 0;
 	bottom: 0;
-	height: 100%;
-	z-index: -10;
-	transform-origin: 0% 0%;
-	transform: rotateY(90deg);
-	background-color: white;
-	
-	&--left {
-		height: 100%;
-		width: 2.5px;
-		top: 0;
-		bottom: 0;
-		left: 0;
-	}
-	
-	&--right {
-		height: 100%;
-		width: 2.5px;
-		top: 0;
-		bottom: 0;
-		right: -2.5px;
-	}
-	
-	&--top {
-		transform: rotateX(-90deg);
-		right: 0;
-		height: 2.5px;
-		width: 100%;
-		right: 0;
-	}
-	
-	&--bottom {
-		transform: rotateX(-90deg);
-		right: 0;
-		height: 2.5px;
-		width: 100%;
-		right: 0;
-		top: unset;
-		bottom: -2.5px;
-	}
-	
+	left: 0;
+}
+
+&--right {
+	height: 351px;
+	width: 2.5px;
+	top: 0;
+	bottom: 0;
+	right: -2.5px;
+}
+
+&--top {
+	-webkit-transform: rotateX(-90deg);
+					transform: rotateX(-90deg);
+	right: 0;
+	height: 2.5px;
+	width: 100%;
+	right: 0;
+}
+
+&--bottom {
+	-webkit-transform: rotateX(-90deg);
+					transform: rotateX(-90deg);
+	right: 0;
+	height: 2.5px;
+	width: 100%;
+	right: 0;
+	top: unset;
+	bottom: -2.5px;
+}
+
 }
 }
 
-	@media (max-width: 400px) {
-		
-		.contact-card {
-			max-width: 200px;
-			width: 200px;
+@media (max-width: 400px) {
+	
+	.contact-card {
+		max-width: 200px;
+		width: 200px;
+		height: 160px;
 
-			&__address-item {
-				font-size: 9.5px;
-			}
+		&__address-item {
+			font-size: 9.5px;
+		}
 
-			&__title {
-				font-size: 13.4px;
-			}
-
+		&__title {
+			font-size: 13.4px;
 		}
 
 	}
 
-
+}
 
 
 
