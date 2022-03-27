@@ -41,10 +41,10 @@ class ContactCard {
 		},
 		enterFocus: () => {
 			this.contactCardConfigs.timeline.pause();
-			gsap.to('.contact-card__inner', { rotationY: "0", rotation: "0", scale: 1.25, duration: 1 })
+			gsap.to('.contact-card__inner', { rotationY: "0", rotation: "0", translateX: 0, scale: 1.25, duration: 1 })
 		},
 		exitFocus: () => {
-			gsap.to('.contact-card__inner', { rotationY: "0", rotation: "15deg", scale: 1, duration: 1 })
+			gsap.to('.contact-card__inner', { rotationY: "0", rotation: "15deg", translateX: 16,  scale: 1, duration: 1 })
 			this.contactCard.setTimeLine();
 			this.contactCardConfigs.timeline.resume();
 		}
