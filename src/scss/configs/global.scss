@@ -24,13 +24,15 @@ img {
 
 .page {
 	background-image: radial-gradient(#1f1f1f, #000000);
+	overflow: hidden;
+
 	
 	&__inner {
 		padding: 32px;
 		min-height: 100vh;
 		height: 100%;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		position: relative;
