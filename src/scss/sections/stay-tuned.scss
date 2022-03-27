@@ -1,0 +1,14 @@
+.stay-tuned {
+	border: 10px solid red;
+
+	&__text {
+		margin-bottom: 32px;
+	}
+	
+	&__input {
+		// background-color: scale($error, 0.3);
+		border: 10px solid blue;
+		background-color: red;
+	}
+
+}

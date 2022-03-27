@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".swiper", {
 	direction: "vertical",
 	mousewheel: true,
 	pagination: {
